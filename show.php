@@ -1,4 +1,5 @@
 <?php
+  $g_page = '';
   require 'config.php';
   require 'database.php';
   

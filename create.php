@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("Location: login.php");
+    exit;
+}
   require 'config.php';
   require 'database.php';
   $g_title = BLOG_NAME . ' - New Post';

@@ -1,3 +1,16 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+if (!isset($g_title)) {
+    $g_title = 'My Blog';
+}
+
+if (!isset($g_page)) {
+    $g_page = '';
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>

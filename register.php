@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+    header("Location: index.php");
+    exit;
+}
+?>
 <html>
 	<head>
 		<title>Main Register Page</title>

@@ -1,19 +1,14 @@
-<html>
-	<head>
-		<title>Main Logout Page</title>
-	</head>
-	<body>
-
-<?php 
-// Put this code in first line of web page. 
+<?php
+// Start session
 session_start();
+
+// Clear all session variables
+$_SESSION = array();
+
+// Destroy the session
 session_destroy();
 
-echo "Session Username is ".$_SESSION['username'];
+// Redirect to home page
+header("Location: index.php");
+exit;
 ?>
-
-
-
-
-	</body>
-</html>
